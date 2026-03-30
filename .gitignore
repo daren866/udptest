@@ -98,3 +98,6 @@ target/
 # Android lint
 lint-report.html
 
+# Gradle daemon JVM properties (generated)
+gradle/gradle-daemon-jvm.properties
+

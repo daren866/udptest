@@ -15,7 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
 import com.example.myapplication.ui.theme.MyApplicationTheme
-import com.mjc.feature.camera.CameraScreen
+import com.mjc.feature.download.DownloadScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyApplicationTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    CameraScreen(
+                    DownloadScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }

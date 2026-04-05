@@ -26,4 +26,7 @@ rootProject.name = "My Application"
 include(":app")
 include(":feature:camera")
 include(":feature:videoplayer")
+include(":feature:download")
 include(":core:mlkit")
+include(":core:network")
+include(":core:download")

@@ -55,6 +55,9 @@ dependencies {
     // 下载模块
     implementation(project(":feature:download"))
 
+    // 视频播放器模块
+    implementation(project(":feature:videoplayer"))
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

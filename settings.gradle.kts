@@ -30,3 +30,5 @@ include(":feature:download")
 include(":core:mlkit")
 include(":core:network")
 include(":core:download")
+
+includeBuild("build-logic")

@@ -5,7 +5,7 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
-  workflow_dispatch:      # 允许手动触发
+  workflow_dispatch:
 
 jobs:
   build:
@@ -27,18 +27,16 @@ jobs:
       - name: Modify app module's applicationId
         run: |
           echo "🔄 修改 app 模块的 applicationId 为 gudao.gudaoapp.udp"
-          
-          # 处理 Groovy DSL (build.gradle)
           if [ -f app/build.gradle ]; then
             sed -i 's/applicationId "[^"]*"/applicationId "gudao.gudaoapp.udp"/g' app/build.gradle
           fi
-          
-          # 处理 Kotlin DSL (build.gradle.kts)
           if [ -f app/build.gradle.kts ]; then
             sed -i 's/applicationId = "[^"]*"/applicationId = "gudao.gudaoapp.udp"/g' app/build.gradle.kts
           fi
-          
           echo "✅ 包名修改完成"
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug
